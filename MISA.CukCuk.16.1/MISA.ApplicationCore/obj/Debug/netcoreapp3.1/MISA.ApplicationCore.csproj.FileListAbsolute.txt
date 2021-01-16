@@ -1,0 +1,14 @@
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.deps.json
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.pdb
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Infrastructure.dll
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Infrastructure.pdb
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.csprojAssemblyReference.cache
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.AssemblyInfo.cs
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.csproj.CopyComplete
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.pdb
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Entity.dll
+C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Entity.pdb
