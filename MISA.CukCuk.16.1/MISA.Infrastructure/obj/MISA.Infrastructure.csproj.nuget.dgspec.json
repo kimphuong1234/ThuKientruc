@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {}
+    "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
+    "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj",
         "projectName": "MISA.Entity",
-        "projectPath": "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj",
+        "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj",
         "packagesPath": "C:\\Users\\dkphuong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Entity\\obj\\",
+        "outputPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dkphuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
+    "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
         "projectName": "MISA.Infrastructure",
-        "projectPath": "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\dkphuong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dkphuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
-                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj"
+              "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
+                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj"
               }
             }
           }

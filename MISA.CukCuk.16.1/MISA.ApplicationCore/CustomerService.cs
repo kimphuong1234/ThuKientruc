@@ -1,5 +1,7 @@
 ﻿using Dapper;
 using MISA.ApplicationCore.Entities;
+using MISA.ApplicationCore.Interface;
+using MISA.Entity;
 using MISA.Entity.Model;
 using MISA.Infrastructure;
 using MySql.Data.MySqlClient;
@@ -10,18 +12,26 @@ using System.Text;
 
 namespace MISA.ApplicationCore
 {
-    public class CustomerService
+    public class CustomerService:ICustomerService
+
     {
+        ICustomerRepository _customerRepository;
+        #region Constructor
+        public CustomerService(ICustomerRepository customerRepository)
+        {
+            _customerRepository = customerRepository;
+        }
+        #endregion
         #region Method
         //Lấy danh sách khách hàng
         public IEnumerable<Customer> GetCustomers()
         {
-            var customerContext = new CustomerContext();
-            var customers = customerContext.GetCustomers();
+            
+            var customers = _customerRepository.GetCustomers();
             return customers;
         }
         //Thêm mới khách hàng
-        public ServiceResult InsertCustomer(Customer customer)
+        public ServiceResult AddCustomer(Customer customer)
         {
             var serviceResult = new ServiceResult();
             var customerContext = new CustomerContext();
@@ -34,10 +44,10 @@ namespace MISA.ApplicationCore
                 {
                     devMsg = new { fieldName = "CustomerCode", msg = "Ma khach hang khong duoc phep de trong" },
                     userMsg = "Mã khách hàng không được phép để trống",
-                    Code = 900, // Mã validate sai
+                    Code = MISACode.NotValid, // Mã validate sai
 
                 };
-                serviceResult.MISACode = 900;
+                serviceResult.MISACode = MISACode.NotValid;
                 serviceResult.Messenger = "Mã khách hàng không được phép để trống";
                 serviceResult.Data = msg;
                 return serviceResult;
@@ -51,11 +61,11 @@ namespace MISA.ApplicationCore
                 {
                     devMsg = new { fieldName = "CustomerCode", msg = "Ma khach hang da ton tai" },
                     userMsg = "Mã khách hàng đã tồn tại",
-                    Code = 900, // Mã validate sai
+                    Code = MISACode.NotValid, // Mã validate sai
 
                 };
-                serviceResult.MISACode = 900;
-                serviceResult.Messenger = "Mã khách hàng không được phép để trống";
+                serviceResult.MISACode = MISACode.NotValid;
+                serviceResult.Messenger = "Mã khách hàng đã tồn tại";
                 serviceResult.Data = msg;
                 return serviceResult; 
             }
@@ -63,15 +73,104 @@ namespace MISA.ApplicationCore
             //Thêm mới dữ liệu đã hợp lệ
 
             var rowAffects = customerContext.InsertCustomer(customer);
-            serviceResult.MISACode = 100;
+            serviceResult.MISACode = MISACode.IsValid;
             serviceResult.Messenger = "Thêm thành công";
             serviceResult.Data = rowAffects;
             return serviceResult;
         }
-        
-        //Sửa thông tin khách hàng
 
+        //Sửa thông tin khách hàng
+        public ServiceResult UpdateCustomer(Customer customer)
+        {
+            var serviceResult = new ServiceResult();
+            var customerContext = new CustomerContext();
+            //validate dữ liệu
+            //Check trường bắt buộc nhập, nếu dữ liệu chưa hợp lệ thì mô tả lỗi
+            var customerCode = customer.CustomerCode;
+            if (string.IsNullOrEmpty(customerCode))
+            {
+                var msg = new
+                {
+                    devMsg = new { fieldName = "CustomerCode", msg = "Ma khach hang chua ton tai" },
+                    userMsg = "Mã khách hàng không tồn tại",
+                    Code = MISACode.NotValid, // Mã validate sai
+
+                };
+                serviceResult.MISACode = MISACode.NotValid;
+                serviceResult.Messenger = "Mã khách hàng không tồn tại";
+                serviceResult.Data = msg;
+                return serviceResult;
+            }
+
+            //check trùng mã:
+            //Thêm mới dữ liệu đã hợp lệ
+
+            var rowAffects = customerContext.UpdateCustomer(customer);
+            serviceResult.MISACode = MISACode.IsValid;
+            serviceResult.Messenger = "Thêm thành công";
+            serviceResult.Data = rowAffects;
+            return serviceResult;
+
+
+        }
         //Xóa khách hàng theo khóa chính
+        public ServiceResult DeleteCustomer(string customerCode)
+        {
+            var serviceResult = new ServiceResult();
+            var customerContext = new CustomerContext();
+            //validate dữ liệu
+            //Check trường bắt buộc nhập, nếu dữ liệu chưa hợp lệ thì mô tả lỗi
+            
+            if (string.IsNullOrEmpty(customerCode))
+            {
+                var msg = new
+                {
+                    devMsg = new { fieldName = "CustomerCode", msg = "Ma khach hang khong duoc phep de trong" },
+                    userMsg = "Mã khách hàng không được phép để trống",
+                    Code = MISACode.NotValid, // Mã validate sai
+
+                };
+                serviceResult.MISACode = MISACode.NotValid;
+                serviceResult.Messenger = "Mã khách hàng không được phép để trống";
+                serviceResult.Data = msg;
+                return serviceResult;
+            }
+
+            //check mã sai:
+            var res = customerContext.GetCustomerByCode(customerCode);
+            if (res == null)
+            {
+                var msg = new
+                {
+                    devMsg = new { fieldName = "CustomerCode", msg = "Ma khach khong ton tai" },
+                    userMsg = "Mã khách hàng không tồn tại",
+                    Code = MISACode.NotValid, // Mã validate sai
+
+                };
+                serviceResult.MISACode = MISACode.NotValid;
+                serviceResult.Messenger = "Mã khách hàng không tồn tại";
+                serviceResult.Data = msg;
+                return serviceResult;
+            }
+
+            //Xóa dữ liệu đã hợp lệ
+
+            var rowAffects = customerContext.Delete(customerCode);
+            serviceResult.MISACode = MISACode.IsValid;
+            serviceResult.Messenger = "Xoá thành công";
+            serviceResult.Data = rowAffects;
+            return serviceResult;
+        }
+
+        public Customer GetCustomerByCode(string customerCode)
+        {
+            throw new NotImplementedException();
+        }
+
+        ServiceResult ICustomerService.AddCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

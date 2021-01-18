@@ -7,6 +7,8 @@ using Dapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MISA.ApplicationCore;
+using MISA.ApplicationCore.Interface;
+using MISA.Entity;
 using MISA.Entity.Model;
 using MySql.Data.MySqlClient;
 
@@ -16,6 +18,11 @@ namespace MISA.CukCuk.Api.Api
     [ApiController]
     public class CustomersController : ControllerBase
     {
+        ICustomerService _customerService;
+        public CustomersController(ICustomerService customerService)
+        {
+            _customerService = customerService;
+        }
         /// <summary>
         /// Lấy dữ liệu khách hàng không truyền tham số
         /// </summary>
@@ -24,8 +31,7 @@ namespace MISA.CukCuk.Api.Api
         [HttpGet]
         public IActionResult Get()
         {
-            var customerService = new CustomerService();
-            var customers = customerService.GetCustomers();
+            var customers = _customerService.GetCustomers(); //Gọi qua interface
             return Ok(customers);
         }
 
@@ -105,15 +111,15 @@ namespace MISA.CukCuk.Api.Api
 
             #endregion
 
-            var customerService = new CustomerService();
+
             //Kết quả trở về
-            var serviceResult = customerService.InsertCustomer(customer);
+            var serviceResult = _customerService.AddCustomer(customer);
             //check du lieu
-            if (serviceResult.MISACode == 900)
+            if (serviceResult.MISACode == MISACode.NotValid)
             {
                 return BadRequest(serviceResult.Data);
             }
-            if (serviceResult.MISACode == 100 && (int)serviceResult.Data > 0)
+            if (serviceResult.MISACode == MISACode.IsValid && (int)serviceResult.Data > 0)
             {
                 return Created("abc", customer);
             }
@@ -126,43 +132,38 @@ namespace MISA.CukCuk.Api.Api
         [HttpPut]
         public IActionResult Put([FromBody] Customer customer) //update
         {
-            //Kết nối tới máy chủ Database
-            var connetionString = "Host=103.124.92.43; Port=3306; Database=MISACukCuk_MF663_DMGIANG; User Id=nvmanh; Password=12345678";
-            //Khởi tạo đối tượng kết nối đến database
-            IDbConnection dbConnection = new MySqlConnection(connetionString);
-
-            DynamicParameters dynamicParameters = new DynamicParameters();
-            var properties = customer.GetType().GetProperties();
-            foreach (var property in properties)
+            //Kết quả trở về
+            var serviceResult = _customerService.UpdateCustomer(customer);
+            //check du lieu
+            if (serviceResult.MISACode == MISACode.NotValid)
             {
-                var propertyName = property.Name;
-                var propertyValue = property.GetValue(customer);
-                if (property.PropertyType == typeof(Guid) || property.PropertyType == typeof(Guid?))
-                {
-                    propertyValue = propertyValue.ToString();
-                }
-
-                dynamicParameters.Add($"@{propertyName}", propertyValue);
+                return BadRequest(serviceResult.Data);
             }
-
-
-            //Dữ liệu vào database
-            var customers = dbConnection.Execute("Proc_UpdateCustomer", commandType: CommandType.StoredProcedure, param: dynamicParameters);
-
-
-            return Ok(customers);
+            if (serviceResult.MISACode == MISACode.IsValid && (int)serviceResult.Data > 0)
+            {
+                return Created("abc", customer);
+            }
+            else
+                return NoContent();
         }
 
         [HttpDelete]
-        public IActionResult Delete(Guid customerId)
+        public IActionResult Delete(string customerCode)
         {
-            //Kết nối tới Database 
-            var connetionString = "Host=103.124.92.43; Port=3306; Database=MISACukCuk_MF663_DMGIANG; User Id=nvmanh; Password=12345678";
-            IDbConnection dbConnection = new MySqlConnection(connetionString);
-            //Dữ liệu từ database
-            var customers = dbConnection.Execute($"DELETE FROM Customer WHERE CustomerId = '{customerId.ToString()}'");
-            //Trả dữ liệu cho Client:
-            return Ok(customers);
+           
+            //Kết quả trở về
+            var serviceResult = _customerService.DeleteCustomer(customerCode);
+            //check du lieu
+            if (serviceResult.MISACode == MISACode.NotValid)
+            {
+                return BadRequest(serviceResult.Data);
+            }
+            if (serviceResult.MISACode == MISACode.IsValid && (int)serviceResult.Data > 0)
+            {
+                return Delete(customerCode);
+            }
+            else
+                return NoContent();
         }
 
 

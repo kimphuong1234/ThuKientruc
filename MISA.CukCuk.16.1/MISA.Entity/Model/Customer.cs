@@ -33,6 +33,8 @@ namespace MISA.Entity.Model
         /// <summary>
         /// Họ tên
         /// </summary>
+        /// 
+        public Guid? CustomerGroupId { get; set; }
         public string FullName { get; set; }
         /// <summary>
         /// Số thẻ thành viên
@@ -49,7 +51,7 @@ namespace MISA.Entity.Model
         /// <summary>
         /// Mã số thuế công ty
         /// </summary>
-        public string CompanyTexCode { get; set; }
+        public string CompanyTaxCode { get; set; }
         /// <summary>
         /// Địa chỉ
         /// </summary>

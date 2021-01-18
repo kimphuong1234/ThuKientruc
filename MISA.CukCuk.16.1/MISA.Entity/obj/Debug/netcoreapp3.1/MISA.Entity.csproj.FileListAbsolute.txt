@@ -7,3 +7,12 @@ C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp
 C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.csproj.CoreCompileInputs.cache
 C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.dll
 C:\Users\dkphuong\source\repos\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.pdb
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\bin\Debug\netcoreapp3.1\MISA.Entity.deps.json
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\bin\Debug\netcoreapp3.1\MISA.Entity.dll
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\bin\Debug\netcoreapp3.1\MISA.Entity.pdb
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.csprojAssemblyReference.cache
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.AssemblyInfoInputs.cache
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.AssemblyInfo.cs
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.csproj.CoreCompileInputs.cache
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.dll
+C:\Users\dkphuong\source\repos\ThuKientruc\MISA.CukCuk.16.1\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.pdb
