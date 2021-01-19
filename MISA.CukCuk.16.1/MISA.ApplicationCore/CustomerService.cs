@@ -1,9 +1,6 @@
 ﻿using Dapper;
 using MISA.ApplicationCore.Entities;
 using MISA.ApplicationCore.Interface;
-using MISA.Entity;
-using MISA.Entity.Model;
-using MISA.Infrastructure;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -26,7 +23,6 @@ namespace MISA.ApplicationCore
         //Lấy danh sách khách hàng
         public IEnumerable<Customer> GetCustomers()
         {
-            
             var customers = _customerRepository.GetCustomers();
             return customers;
         }
@@ -34,7 +30,7 @@ namespace MISA.ApplicationCore
         public ServiceResult AddCustomer(Customer customer)
         {
             var serviceResult = new ServiceResult();
-            var customerContext = new CustomerContext();
+            
             //validate dữ liệu
             //Check trường bắt buộc nhập, nếu dữ liệu chưa hợp lệ thì mô tả lỗi
             var customerCode = customer.CustomerCode;
@@ -54,7 +50,7 @@ namespace MISA.ApplicationCore
             }
                 
             //check trùng mã:
-            var res = customerContext.GetCustomerByCode(customerCode);
+            var res = _customerRepository.GetCustomerByCode(customerCode);
             if (res != null)
             {
                 var msg = new
@@ -72,7 +68,7 @@ namespace MISA.ApplicationCore
             
             //Thêm mới dữ liệu đã hợp lệ
 
-            var rowAffects = customerContext.InsertCustomer(customer);
+            var rowAffects = _customerRepository.AddCustomer(customer);
             serviceResult.MISACode = MISACode.IsValid;
             serviceResult.Messenger = "Thêm thành công";
             serviceResult.Data = rowAffects;
@@ -83,7 +79,7 @@ namespace MISA.ApplicationCore
         public ServiceResult UpdateCustomer(Customer customer)
         {
             var serviceResult = new ServiceResult();
-            var customerContext = new CustomerContext();
+           
             //validate dữ liệu
             //Check trường bắt buộc nhập, nếu dữ liệu chưa hợp lệ thì mô tả lỗi
             var customerCode = customer.CustomerCode;
@@ -105,7 +101,7 @@ namespace MISA.ApplicationCore
             //check trùng mã:
             //Thêm mới dữ liệu đã hợp lệ
 
-            var rowAffects = customerContext.UpdateCustomer(customer);
+            var rowAffects = _customerRepository.UpdateCustomer(customer);
             serviceResult.MISACode = MISACode.IsValid;
             serviceResult.Messenger = "Thêm thành công";
             serviceResult.Data = rowAffects;
@@ -117,7 +113,7 @@ namespace MISA.ApplicationCore
         public ServiceResult DeleteCustomer(string customerCode)
         {
             var serviceResult = new ServiceResult();
-            var customerContext = new CustomerContext();
+           
             //validate dữ liệu
             //Check trường bắt buộc nhập, nếu dữ liệu chưa hợp lệ thì mô tả lỗi
             
@@ -137,7 +133,7 @@ namespace MISA.ApplicationCore
             }
 
             //check mã sai:
-            var res = customerContext.GetCustomerByCode(customerCode);
+            var res = _customerRepository.GetCustomerByCode(customerCode);
             if (res == null)
             {
                 var msg = new
@@ -155,7 +151,7 @@ namespace MISA.ApplicationCore
 
             //Xóa dữ liệu đã hợp lệ
 
-            var rowAffects = customerContext.Delete(customerCode);
+            var rowAffects = _customerRepository.DeleteCustomer(customerCode);
             serviceResult.MISACode = MISACode.IsValid;
             serviceResult.Messenger = "Xoá thành công";
             serviceResult.Data = rowAffects;
@@ -167,10 +163,6 @@ namespace MISA.ApplicationCore
             throw new NotImplementedException();
         }
 
-        ServiceResult ICustomerService.AddCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
         #endregion
     }
 }

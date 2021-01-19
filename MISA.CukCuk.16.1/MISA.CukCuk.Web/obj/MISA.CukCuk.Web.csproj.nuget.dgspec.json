@@ -27,14 +27,7 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
-                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj"
-              },
-              "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -102,8 +95,8 @@
               "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
                 "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
               },
-              "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
-                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj"
+              "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
               }
             }
           }
@@ -167,60 +160,6 @@
         }
       }
     },
-    "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj",
-        "projectName": "MISA.Entity",
-        "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj",
-        "packagesPath": "C:\\Users\\dkphuong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\dkphuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -245,8 +184,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
-                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj"
+              "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
               }
             }
           }
@@ -264,6 +203,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.0.78, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "MySql.Data": {
               "target": "Package",

@@ -7,9 +7,8 @@ using Dapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MISA.ApplicationCore;
+using MISA.ApplicationCore.Entities;
 using MISA.ApplicationCore.Interface;
-using MISA.Entity;
-using MISA.Entity.Model;
 using MySql.Data.MySqlClient;
 
 namespace MISA.CukCuk.Api.Api
@@ -44,12 +43,13 @@ namespace MISA.CukCuk.Api.Api
         [HttpGet("{customerId}")]
         public IActionResult GetCustomer(Guid customerId)
         {
-            //Kết nối tới Database 
-            var connetionString = "Host=103.124.92.43; Port=3306; Database=MISACukCuk_MF663_DMGIANG; User Id=nvmanh; Password=12345678";
-            IDbConnection dbConnection = new MySqlConnection(connetionString);
-            //Dữ liệu từ database
-            var customers = dbConnection.Query<Customer>($"SELECT * FROM Customer WHERE CustomerId = '{customerId.ToString()}'").FirstOrDefault();
+            ////Kết nối tới Database 
+            //var connetionString = "Host=103.124.92.43; Port=3306; Database=MISACukCuk_MF663_DMGIANG; User Id=nvmanh; Password=12345678";
+            //IDbConnection dbConnection = new MySqlConnection(connetionString);
+            ////Dữ liệu từ database
+            //var customers = dbConnection.Query<Customer>($"SELECT * FROM Customer WHERE CustomerId = '{customerId.ToString()}'").FirstOrDefault();
             //Trả dữ liệu cho Client:
+            var customers = _customerService.GetCustomers(); //Gọi qua interface
             return Ok(customers);
         }
 

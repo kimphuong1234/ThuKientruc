@@ -1562,31 +1562,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
-      },
-      "MISA.Entity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/MISA.Entity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MISA.Entity.dll": {}
-        }
-      },
-      "MISA.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Dapper": "2.0.78",
-          "MISA.Entity": "1.0.0",
-          "MySql.Data": "8.0.22"
-        },
-        "compile": {
-          "bin/placeholder/MISA.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MISA.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -5665,23 +5640,11 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
-    },
-    "MISA.Entity/1.0.0": {
-      "type": "project",
-      "path": "../MISA.Entity/MISA.Entity.csproj",
-      "msbuildProject": "../MISA.Entity/MISA.Entity.csproj"
-    },
-    "MISA.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../MISA.Infrastructure/MISA.Infrastructure.csproj",
-      "msbuildProject": "../MISA.Infrastructure/MISA.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Dapper >= 2.0.78",
-      "MISA.Entity >= 1.0.0",
-      "MISA.Infrastructure >= 1.0.0",
       "MySql.Data >= 8.0.22"
     ]
   },
@@ -5711,14 +5674,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj": {
-              "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Entity\\MISA.Entity.csproj"
-            },
-            "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iepANit1B6GCasBqSM29UZeYOZQ1opIBeTjQaH0cIXwiasp5GnLtVnncyd2vxb1y1Y6eInDKw9l65S/pvKNawA==",
+  "dgSpecHash": "Dw7aXTno+KzEJyn8qzPbp6EZE3L0wNUlLNSb3ojdHUS2hO1J28hmW6X/btRdsCEeAyzsladA9PrAudDlbT9zww==",
   "success": true,
   "projectFilePath": "C:\\Users\\dkphuong\\source\\repos\\ThuKientruc\\MISA.CukCuk.16.1\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "C:\\Users\\dkphuong\\.nuget\\packages\\k4os.compression.lz4.streams\\1.1.11\\k4os.compression.lz4.streams.1.1.11.nupkg.sha512",
     "C:\\Users\\dkphuong\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
     "C:\\Users\\dkphuong\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\dkphuong\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\dkphuong\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\dkphuong\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\dkphuong\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\dkphuong\\.nuget\\packages\\microsoft.win32.primitives\\4.0.1\\microsoft.win32.primitives.4.0.1.nupkg.sha512",

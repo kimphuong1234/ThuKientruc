@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MISA.Entity
+namespace MISA.ApplicationCore.Entities
 {
-    /// <summary>
-    /// MISACode để xác định trạng thái của validate
-    /// </summary>
     public enum MISACode
     {
         /// <summary>
         /// Dữ liệu hợp lệ
         /// </summary>
-        IsValid = 100, 
+        Isvalid = 100,
         /// <summary>
         /// Dữ liệu chưa hợp lệ
         /// </summary>
         NotValid = 900,
         /// <summary>
-        /// Thêm thành công
+        /// Thành công
         /// </summary>
-        Success = 200
+        Success =200,
+        IsValid = 901
     }
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -7,11 +7,6 @@
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.78" />
     <PackageReference Include="MySql.Data" Version="8.0.22" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\MISA.Entity\MISA.Entity.csproj" />
-    <ProjectReference Include="..\MISA.Infrastructure\MISA.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

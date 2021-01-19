@@ -1,5 +1,4 @@
 ﻿using MISA.ApplicationCore.Entities;
-using MISA.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;

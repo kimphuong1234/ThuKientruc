@@ -9,8 +9,6 @@
       "MISA.ApplicationCore/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.78",
-          "MISA.Entity": "1.0.0",
-          "MISA.Infrastructure": "1.0.0",
           "MySql.Data": "8.0.22"
         },
         "runtime": {
@@ -1031,21 +1029,6 @@
             "fileVersion": "1.0.24212.1"
           }
         }
-      },
-      "MISA.Entity/1.0.0": {
-        "runtime": {
-          "MISA.Entity.dll": {}
-        }
-      },
-      "MISA.Infrastructure/1.0.0": {
-        "dependencies": {
-          "Dapper": "2.0.78",
-          "MISA.Entity": "1.0.0",
-          "MySql.Data": "8.0.22"
-        },
-        "runtime": {
-          "MISA.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -1677,16 +1660,6 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
-    },
-    "MISA.Entity/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MISA.Infrastructure/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
