@@ -29,12 +29,12 @@ namespace MISA.ApplicationCore.Entities
         /// <summary>
         /// Mã khách hàng
         /// </summary>
+        public Guid? CustomerGroupId { get; set; }
         public string CustomerCode { get; set; }
         /// <summary>
         /// Họ tên
         /// </summary>
-        /// 
-        public Guid? CustomerGroupId { get; set; }
+       
         public string FullName { get; set; }
         /// <summary>
         /// Số thẻ thành viên
